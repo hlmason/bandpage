@@ -22,10 +22,15 @@ h1 {
 		opacity: 0.7;
 		text-align: center;
 		form {
-			height: 196px;
-			margin-top: 98px;
+			height: (392px/2); /* height of #main-photo divided by 2 */
+			margin-top: (392px/4); /* height of form divided by 2 */
+			padding-right: 15px;
+			padding-left: 15px;
 			.glyphicon {
 				margin-right: 5px;
+				@media (max-width: 476px) {
+					display: none;
+				}
 			}
 			input {
 				&[type=search] {
@@ -36,6 +41,9 @@ h1 {
 					height: 40px;
 					width: 300px;
 					opacity: 1;
+					@media (max-width: 476px) {
+						margin-top: 56px; 
+					}
 				}
 				&[type=submit] {
 					@include border-radius(3px);
@@ -43,6 +51,10 @@ h1 {
 					border: 1px solid #999;
 					color: white;
 					padding: 10px 20px;
+					@media (max-width: 476px) {
+						margin-top: 10px;
+						width: 300px;
+					}
 					&:hover {
 						background-color: lighten(darkturquoise, 10%);
 					}
