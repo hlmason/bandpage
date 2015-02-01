@@ -55,7 +55,7 @@ h1 {
 						margin-top: 10px;
 						width: 300px;
 					}
-					&:hover {
+					&:hover, &:focus {
 						background-color: lighten(darkturquoise, 10%);
 					}
 				}
@@ -71,6 +71,48 @@ h1 {
 			}
 			:-ms-input-placeholder {
 				color: black;
+			}
+		}
+	}
+}
+
+#blog-posts-container {
+	margin-bottom: 15px;
+	.blog-post {
+		@include border-radius(5px);
+		border: 1px solid lightgray;
+		margin-top: 15px;
+		padding: 15px;
+		h4 {
+			display: inline-block;
+			margin-top: 0;
+			text-align: center;
+			@media (min-width: 768px) and (max-width: 991px) {
+				display: block;
+				margin-bottom: 5px;
+			}
+		}
+		.center {
+			display: inline;
+			@media (min-width: 768px) and (max-width: 991px) {
+				display: block;
+				text-align: center;
+			}
+			a {
+				color: darken(darkturquoise, 10%);
+				float: right;
+				&:hover, &:focus {
+					color: lighten(darkturquoise, 3%);
+				}
+				@media (min-width: 768px) and (max-width: 991px) {
+					float: none;
+				}
+			}
+		}
+		p {
+			margin-bottom: 0;
+			@media (min-width: 768px) and (max-width: 991px) {
+				margin-top: 8px;
 			}
 		}
 	}
