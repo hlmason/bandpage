@@ -15,14 +15,14 @@ function requestCrossDomain(site, callback)
 			blogPostHTML += '<div class="center"><a href="' + blogPost.link + '" target="blank">' + 'Read Full Blog' + '</a></div>';
 			blogPostHTML += '<p>' + blogPost.description + '</p>';
 			blogPostHTML += '</div>';
-			$('#blog-posts-container').html(blogPostHTML);
+			$('#blogPostContainer').html(blogPostHTML);
 		});
 
 		$(function()
 		{
 		  $(".holder").jPages(
 		  {
-		    containerID : "blog-posts-container",
+		    containerID : "blogPostContainer",
 		    perPage: 5,
 		    keyBrowse: true
 		  });

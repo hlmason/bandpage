@@ -77,7 +77,7 @@ h1 {
 	}
 }
 
-#blog-posts-container {
+.blog-post-container {
 	margin-bottom: 15px;
 	.blog-post {
 		@include border-radius(5px);
