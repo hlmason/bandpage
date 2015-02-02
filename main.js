@@ -16,11 +16,18 @@ function requestCrossDomain(site, callback)
 			blogPostHTML += '<p>' + blogPost.description + '</p>';
 			blogPostHTML += '</div>';
 			$('#blog-posts-container').html(blogPostHTML);
-			if(i === 4) 
-			{
-				return false;
-			}
 		});
+
+		$(function()
+		{
+		  $(".holder").jPages(
+		  {
+		    containerID : "blog-posts-container",
+		    perPage: 5,
+		    keyBrowse: true
+		  });
+		});
+
 	});
 
 }
