@@ -1,3 +1,5 @@
+$primary-link-color: darkturquoise;
+
 @mixin border-radius($radius) {
 	-moz-border-radius: $radius;
 		 border-radius: $radius;
@@ -48,7 +50,7 @@ h1 {
 				}
 				&[type=submit] {
 					@include border-radius(3px);
-					background-color: darkturquoise;
+					background-color: $primary-link-color;
 					border: 1px solid #999;
 					color: white;
 					padding: 10px 20px;
@@ -57,7 +59,7 @@ h1 {
 						width: 300px;
 					}
 					&:hover, &:focus {
-						background-color: lighten(darkturquoise, 10%);
+						background-color: lighten($primary-link-color, 10%);
 					}
 				}
 			}
@@ -100,10 +102,10 @@ h1 {
 				text-align: center;
 			}
 			a {
-				color: darken(darkturquoise, 10%);
+				color: darken($primary-link-color, 10%);
 				float: right;
 				&:hover, &:focus {
-					color: lighten(darkturquoise, 3%);
+					color: lighten($primary-link-color, 3%);
 				}
 				@media (max-width: 991px) {
 					float: none;
@@ -115,6 +117,23 @@ h1 {
 			@media (max-width: 991px) {
 				margin-top: 10px;
 			}
+		}
+	}
+}
+
+.holder { /* See jPages.css for additional styles */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* To match Bootstrap */
+	text-align: center;
+	a {
+		font-size: 14px; /* To match Bootstrap */
+		&:hover {
+			background-color: $primary-link-color;
+		}
+	}
+	a.jp-current {
+		color: $primary-link-color;
+		&:hover {
+			color: lighten($primary-link-color, 3%);
 		}
 	}
 }

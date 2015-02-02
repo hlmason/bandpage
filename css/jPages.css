@@ -3,14 +3,12 @@
 }
 
 .holder a {
-	font-size: 12px;
 	cursor: pointer;
 	margin: 0 5px;
 	color: #333;
 }
 
 .holder a:hover {
-	background-color: #222;
 	color: #fff;
 }
 
@@ -18,7 +16,6 @@
 .holder a.jp-next { margin-left: 15px; }
 
 .holder a.jp-current, a.jp-current:hover { 
-	color: #FF4242;
 	font-weight: bold;
 }
 
