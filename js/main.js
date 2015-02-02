@@ -31,3 +31,15 @@ function requestCrossDomain(site, callback)
 	});
 
 }
+
+$('form').submit(function(event) // When form is submitted,
+{
+    var path = $('#search').val() + '/feed'; // get user's blog URL input.
+
+    requestCrossDomain(path, function(results) 
+    {
+
+    });
+
+    return false; // Disables default form submit action
+});
