@@ -12,7 +12,7 @@ function requestCrossDomain(site, callback)
 			// console.log(i + ' ' + blogPost);
 			blogPostHTML += '<div class="blog-post">';
 			blogPostHTML += '<h4>' + blogPost.title + '</h4>';
-			blogPostHTML += '<div class="center"><a href="' + blogPost.link + '" target="blank">' + 'Read Full Blog' + '</a></div>';
+			blogPostHTML += '<div class="center"><a href="' + blogPost.link + '" target="blank">' + 'Read Full Post' + '</a></div>';
 			blogPostHTML += '<p>' + blogPost.description + '</p>';
 			blogPostHTML += '</div>';
 			$('#blogPostContainer').html(blogPostHTML);
