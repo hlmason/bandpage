@@ -6,14 +6,19 @@ $primary-link-color: darkturquoise;
 }
 
 h1 {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Lora', serif;
+	word-spacing: 2px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+	@media (max-width: 365px) {
+		font-size: 31px;
+		text-align: center;
+	}
 }
 
 #main-photo {
 	background-attachment: fixed;
-	background-image: url('../img/main-photo.jpg');
+	background-image: url('../img/main-photo.jpg'); /* https://www.flickr.com/photos/kylethale/7258961038/in/photolist-cuSxWq-85yvUD-aSxy4e-ohGVCS-it2xn-82dP6o-5n7d79-cWrUgJ-6vh444-89NEwb-HddpD-c38dD3-iBFRu-pXGYaW-djfK4d-dm1o-c4s5dE-uuDKE-peD5T-peD5M-peD5V-4SiHTh-7CB6zy-8ZdcZh-53WnEB-bafk56-peD5R-cVf6n-7ZPaF8-7Dh7PK-7dmAJm-7Cxh1B-dpi8Se-MojH4-7CB74u-jSET7-4WmZDb-7BYo5f-7h49dm-v7bdm-6cjKiC-63kL7M-4LgoRe-7iwJiQ-8veP94-6VeVvG-bRE6D4-5qnPWb-MtEGS-MojFx */
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 392px;
@@ -35,6 +40,9 @@ h1 {
 				}
 			}
 			input {
+				@media (max-width: 365px) {
+					width: 98% !important;
+				}
 				&[type=search] {
 					@include border-radius(3px);
 					border: 1px solid #999;
