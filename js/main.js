@@ -41,5 +41,9 @@ $('form').submit(function(event) // When form is submitted,
 
     });
 
+	$('html, body').animate({
+	    scrollTop: $("#blogPostContainer").offset().top
+	}, 1000);
+
     return false; // Disables default form submit action
 });
