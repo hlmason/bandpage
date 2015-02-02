@@ -8,8 +8,6 @@ function requestCrossDomain(site, callback) {
 
 	// var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from html where url="' + site + '"') + '&format=xml&callback=?';
 
-	var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT title, link, description FROM rss where url="' + site + '"') + '&format=xml&callback=?';
-
 	// $.getJSON(yql, function(data) {
 	// 	if(data.results[0]) {
 	// 		data = data.results[0].replace(/<script[^>]*>[\s\S]*?<\/script>/);
@@ -22,17 +20,19 @@ function requestCrossDomain(site, callback) {
 	// 	else throw new Error('Nothing returned from getJSON.');
 	// });
 
+	var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT title, link, description FROM feed where url="' + site + '"') + '&format=json&callback=?';
+
 	$.getJSON(yql, function(results) {
-		console.log(results);
-		// var blogPostHTML = '';
-		// results = JSON.parse(results);
+		// console.log(results);
+		var blogPostHTML = '';
 		$.each(results.query.results.item, function(i, blogPost) {
-			console.log(i + ' ' + blogPost);
-			// blogPostHTML += '<div class="blog-post">';
-			// blogPostHTML += '<h4>' + blogPost.title + '</h4>';
-			// blogPostHTML += '<div class="center"><a href="' + blogPost.link + '" target="blank"></a></div>';
-			// blogPostHTML += '<p>' + blogPost.description + '</p>';
-			// $('#blog-posts-container').html(blogPostHTML);
+			// console.log(i + ' ' + blogPost);
+			blogPostHTML += '<div class="blog-post">';
+			blogPostHTML += '<h4>' + blogPost.title + '</h4>';
+			blogPostHTML += '<div class="center"><a href="' + blogPost.link + '" target="blank"></a></div>';
+			blogPostHTML += '<p>' + blogPost.description + '</p>';
+			blogPostHTML += '</div>';
+			$('#blog-posts-container').html(blogPostHTML);
 		});
 	});
 
