@@ -87,33 +87,33 @@ h1 {
 			display: inline-block;
 			margin-top: 0;
 			text-align: center;
-			@media (min-width: 768px) and (max-width: 991px) {
-				display: block;
-				margin-bottom: 5px;
-			}
+			// @media (min-width: 768px) and (max-width: 991px) {
+			// 	display: block;
+			// 	margin-bottom: 5px;
+			// }
 		}
 		.center {
 			display: inline;
-			@media (min-width: 768px) and (max-width: 991px) {
-				display: block;
-				text-align: center;
-			}
+			// @media (min-width: 768px) and (max-width: 991px) {
+			// 	display: block;
+			// 	text-align: center;
+			// }
 			a {
 				color: darken(darkturquoise, 10%);
 				float: right;
 				&:hover, &:focus {
 					color: lighten(darkturquoise, 3%);
 				}
-				@media (min-width: 768px) and (max-width: 991px) {
-					float: none;
-				}
+				// @media (min-width: 768px) and (max-width: 991px) {
+				// 	float: none;
+				// }
 			}
 		}
 		p {
 			margin-bottom: 0;
-			@media (min-width: 768px) and (max-width: 991px) {
-				margin-top: 8px;
-			}
+			// @media (min-width: 768px) and (max-width: 991px) {
+			// 	margin-top: 8px;
+			// }
 		}
 	}
 }
