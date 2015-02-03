@@ -1,7 +1,7 @@
 function requestCrossDomain(site, callback) 
 {
 
-	var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT title, link, description FROM feed where url="' + site + '"') + '&format=json&callback=?';
+	var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT title, link, description FROM feed WHERE url="' + site + '"') + '&format=json&callback=?';
 
 	$.getJSON(yql, function(data) 
 	{
