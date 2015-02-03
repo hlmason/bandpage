@@ -18,13 +18,14 @@ function requestCrossDomain(site, callback)
 			$('#blogPostContainer').html(blogPostHTML);
 		});
 
+		// Pagination plugin
 		$(function()
 		{
 		  $(".holder").jPages(
 		  {
 		    containerID : "blogPostContainer",
 		    perPage: 5,
-		    keyBrowse: true
+		    keyBrowse: true // Enables left and right arrows
 		  });
 		});
 
@@ -41,6 +42,7 @@ $('form').submit(function(event) // When form is submitted,
 
     });
 
+	// Moves page to blog posts
 	$('html, body').animate({
 	    scrollTop: $("#blogPostContainer").offset().top
 	}, 1000);
