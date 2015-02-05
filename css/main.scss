@@ -1,4 +1,5 @@
 $primary-link-color: darkturquoise;
+$primary-link-hover-color: lighten($primary-link-color, 3%);
 
 @mixin border-radius($radius) {
 	-moz-border-radius: $radius;
@@ -115,7 +116,7 @@ h1 {
 				color: darken($primary-link-color, 10%);
 				float: right;
 				&:hover, &:focus {
-					color: lighten($primary-link-color, 3%);
+					color: $primary-link-hover-color;
 				}
 				@media (max-width: 991px) {
 					float: none;
@@ -143,7 +144,7 @@ h1 {
 	a.jp-current {
 		color: $primary-link-color;
 		&:hover {
-			color: lighten($primary-link-color, 3%);
+			color: $primary-link-hover-color;
 		}
 	}
 }
