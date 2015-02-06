@@ -11,10 +11,10 @@ h1 {
 	word-spacing: 2px;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	@media (max-width: 991px) {
+	@media only screen and (max-width: 991px) {
 		text-align: center;
 	}
-	@media (max-width: 365px) {
+	@media only screen and (max-width: 365px) {
 		font-size: 31px;
 	}
 }
@@ -38,12 +38,12 @@ h1 {
 			padding-left: 15px;
 			.glyphicon {
 				margin-right: 5px;
-				@media (max-width: 476px) {
+				@media only screen and (max-width: 476px) {
 					display: none;
 				}
 			}
 			input {
-				@media (max-width: 365px) {
+				@media only screen and (max-width: 365px) {
 					width: 98% !important;
 				}
 				&[type=search] {
@@ -55,8 +55,8 @@ h1 {
 					width: 300px;
 					opacity: 1;
 					padding: 10px;
-					@media (max-width: 476px) {
-						margin-top: 56px; 
+					@media only screen and (max-width: 476px) {
+						margin-top: 56px;
 					}
 				}
 				&[type=submit] {
@@ -65,7 +65,7 @@ h1 {
 					border: 1px solid #999;
 					color: white;
 					padding: 10px 20px;
-					@media (max-width: 476px) {
+					@media only screen and (max-width: 476px) {
 						margin-top: 10px;
 						width: 300px;
 					}
@@ -101,14 +101,14 @@ h1 {
 			display: inline-block;
 			margin-top: 0;
 			text-align: center;
-			@media (max-width: 991px) {
+			@media only screen and (max-width: 991px) {
 				display: block;
 				margin-bottom: 5px;
 			}
 		}
 		.center {
 			display: inline;
-			@media (max-width: 991px) {
+			@media only screen and (max-width: 991px) {
 				display: block;
 				text-align: center;
 			}
@@ -118,14 +118,14 @@ h1 {
 				&:hover, &:focus {
 					color: $primary-link-hover-color;
 				}
-				@media (max-width: 991px) {
+				@media only screen and (max-width: 991px) {
 					float: none;
 				}
 			}
 		}
 		p {
 			margin-bottom: 0;
-			@media (max-width: 991px) {
+			@media only screen and (max-width: 991px) {
 				margin-top: 10px;
 			}
 		}
