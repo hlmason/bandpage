@@ -7,7 +7,7 @@ $primary-link-hover-color: lighten($primary-link-color, 3%);
 }
 
 h1 {
-	font-family: 'Lora', serif;
+	font-family: Lora, serif;
 	word-spacing: 2px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -38,13 +38,13 @@ h1 {
 			padding-left: 15px;
 			.glyphicon {
 				margin-right: 5px;
-				@media only screen and (max-width: 476px) {
+				@media only screen and (max-width: 496px) {
 					display: none;
 				}
 			}
 			input {
 				@media only screen and (max-width: 365px) {
-					width: 98% !important;
+					width: 100% !important;
 				}
 				&[type=search] {
 					@include border-radius(3px);
@@ -52,10 +52,10 @@ h1 {
 					font-size: 16px;
 					margin-top: 80px;
 					height: 40px;
-					width: 300px;
+					width: 320px; /* This width for Firefox */
 					opacity: 1;
 					padding: 10px;
-					@media only screen and (max-width: 476px) {
+					@media only screen and (max-width: 496px) {
 						margin-top: 56px;
 					}
 				}
@@ -65,9 +65,9 @@ h1 {
 					border: 1px solid #999;
 					color: white;
 					padding: 10px 20px;
-					@media only screen and (max-width: 476px) {
+					@media only screen and (max-width: 496px) {
 						margin-top: 10px;
-						width: 300px;
+						width: 320px; /* Same as 'type=search' */
 					}
 					&:hover, &:focus {
 						background-color: lighten($primary-link-color, 10%);
@@ -76,15 +76,19 @@ h1 {
 			}
 			::-webkit-input-placeholder {
 				color: black;
+				font-size: 15px;
 			}
 			::-moz-input-placeholder {
 				color: black;
+				font-size: 15px;
 			}
 			:-moz-placeholder {
 				color: black;
+				font-size: 15px;
 			}
 			:-ms-input-placeholder {
 				color: black;
+				font-size: 15px;
 			}
 		}
 	}
