@@ -1,14 +1,11 @@
-function requestCrossDomain(site, callback) 
-{
+function requestCrossDomain(site, callback) {
 
 	var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT title, link, description FROM feed WHERE url="' + site + '"') + '&format=json&callback=?';
 
-	$.getJSON(yql, function(data) 
-	{
+	$.getJSON(yql, function(data) {
 		// console.log(data);
 		var blogPostHTML = '';
-		$.each(data.query.results.item, function(i, blogPost) 
-		{
+		$.each(data.query.results.item, function(i, blogPost) {
 			// console.log(i + ' ' + blogPost);
 			blogPostHTML += '<div class="blog-post">';
 			blogPostHTML += '<h4>' + blogPost.title + '</h4>';
@@ -19,10 +16,8 @@ function requestCrossDomain(site, callback)
 		});
 
 		// Pagination plugin
-		$(function()
-		{
-		  $(".holder").jPages(
-		  {
+		$(function() {
+		  $(".holder").jPages({
 		    containerID : "blogPostContainer",
 		    perPage: 5,
 		    keyBrowse: true // Enables left and right arrows
@@ -33,12 +28,10 @@ function requestCrossDomain(site, callback)
 
 }
 
-$('form').submit(function(event) // When form is submitted,
-{
+$('form').submit(function(event) { // When form is submitted,
     var path = $('#search').val() + '/feed'; // get user's blog URL input.
 
-    requestCrossDomain(path, function(results) 
-    {
+    requestCrossDomain(path, function(results) {
 
     });
 
