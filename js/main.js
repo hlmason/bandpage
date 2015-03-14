@@ -3,6 +3,7 @@ function requestCrossDomain(site, callback) {
 	var yql = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT title, link, description FROM feed WHERE url="' + site + '"') + '&format=json&callback=?';
 
 	$.getJSON(yql, function(data) {
+
 		// console.log(data);
 		var blogPostHTML = '';
 		$.each(data.query.results.item, function(i, blogPost) {
@@ -29,9 +30,9 @@ function requestCrossDomain(site, callback) {
 }
 
 $('form').submit(function(event) { // When form is submitted,
-    var path = $('#search').val() + '/feed'; // get user's blog URL input.
+    var $path = $('#search').val() + '/feed'; // get user's blog URL input.
 
-    requestCrossDomain(path, function(results) {
+    requestCrossDomain($path, function(results) {
 
     });
 
